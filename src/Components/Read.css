@@ -1,0 +1,19 @@
+*{
+    padding: 1%;
+    background-color: rgb(61, 139, 106);
+    color: azure;
+    font-weight: bolder;
+
+}
+
+
+.tableread{
+
+    
+    text-align: center;
+   height: 200px;
+    background-color: rgb(230, 183, 66);
+    border-radius: 20px;
+
+}
+
