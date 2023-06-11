@@ -5,7 +5,32 @@
     font-weight: bolder;
 
 }
+.bodyclass
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
 
+.tableread
+{
+    height: 650px;
+    width: 550px;
+
+
+}
+
+.left{
+
+    background-color: rgb(57, 0, 100);
+}
+
+.right{
+
+
+    background-color: rgb(57, 0, 100);
+}
 
 .tableread{
 

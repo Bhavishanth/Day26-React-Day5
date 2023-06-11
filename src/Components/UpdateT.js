@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { API_URL } from '../constants/URL';
+import { API_URL1 } from '../constants/URL1';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './Update.css'
@@ -10,13 +10,15 @@ function Update() {
   const [firstname, setFirstName] = useState("");
   const [age, setAge] = useState("");
   const [id, setId] = useState("");
+  const [subject, setSubject] = useState("");
   const navigate = useNavigate();
 
  const updateUser = async () => {
-      await axios.put((API_URL + id), {
+      await axios.put((API_URL1 + id), {
 
         firstname,
-        age
+        age,
+        subject
       }
       )
       navigate('/ReadT')
@@ -27,6 +29,7 @@ function Update() {
     setId(localStorage.getItem('id', id))
     setFirstName(localStorage.getItem('firstname', firstname))
     setAge(localStorage.getItem('age', age))
+    setSubject(localStorage.getItem('subject', subject))
 
   }, [])
 
@@ -34,7 +37,7 @@ function Update() {
   return (
     <div>
       <form class = "formdsn1 center">
-        Name: <input class = "inputtxt1" value = {firstname} type="text" placeholder="Enter Your Name" onChange={ event =>
+        Name: <input class = "inputtxt1 center" value = {firstname} type="text" placeholder="Enter Your Name" onChange={ event =>
         {
           setFirstName(event.target.value)
         } }>
@@ -46,7 +49,13 @@ function Update() {
             setAge(event.target.value)
 
          } }></input><br></br><br></br>
-        <button class = "btn1 center" type="button" onClick={updateUser}>Update</button>
+
+        Subject: <input class = "subject1 center" value = {subject} type = "text" placeholder="Enter Your Number" onChange={ event => 
+         {
+            setSubject(event.target.value)
+
+         } }></input><br></br><br></br>
+        <button class = "btn1" type="button" onClick={updateUser}>Update</button>
 
       </form>
     </div>

@@ -11,11 +11,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    
+}
+.center1{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     
 }
 
-.formdsn1{
+
+.formdsn{
 
     text-align: center;
    height: 350px;
@@ -24,30 +32,27 @@
 
 }
 
-.inputtxt1
+.inputtxt
 {
     border-radius: 10px;
     border: 0.5px;
 }
 
-.age1
+.age
 {
     border-radius: 10px;
     border: 0.5px;
 }
 
-.btn1
+.btn
 {
     border: 0;
     border-radius: 10px;
 
 }
 
-.subject1
+.subject
 {
-
     border-radius: 10px;
     border: 0.5px;
-    
-
 }
